@@ -5,12 +5,13 @@
   "main": "api/index.js",
   "scripts": {
     "start": "npm run build:client && npm run start:server",
-    "build:client": "cd client && npm install && npm run build",
-    "start:server": "cd api && npm install && npm start",
+    "build:client": "cd client && npm install --production=false && npm run build",
+    "start:server": "cd api && npm install --production=false && npm start",
     "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd api && npm run dev",
-    "install:all": "npm install && cd client && npm install && cd ../api && npm install"
+    "install:all": "npm install && cd client && npm install && cd ../api && npm install",
+    "postinstall": "npm run install:all"
   },
   "keywords": ["airbnb", "clone", "fullstack", "react", "nodejs", "mongodb"],
   "author": "Chirag Yadav",

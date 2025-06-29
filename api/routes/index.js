@@ -14,6 +14,15 @@ router.get('/', (req, res) => {
   });
 });
 
+// Health check route for Railway
+router.get('/api', (req, res) => {
+  res.status(200).json({
+    status: 'OK',
+    message: 'StayInn API is running',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // upload photo using image url
 router.post('/upload-by-link', async (req, res) => {
   try {
