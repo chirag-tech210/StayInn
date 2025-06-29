@@ -1,107 +1,118 @@
-# Airbnb Clone
+# 🏨 StayInn
 
-## Overview
+![StayInn Home Screenshot](./screenshot-home.png)
 
-This project is a full-stack web application developed as a clone of Airbnb using the MERN stack (MongoDB, Express.js, React.js, Node.js). It aims to replicate the core functionality of Airbnb, allowing users to search for accommodations, view details, make bookings, and manage their listings.
+> **StayInn** is a modern, full-stack travel accommodation platform for India, inspired by Airbnb, built with a futuristic blue theme and crafted by [Chirag Yadav](https://github.com/chirag-tech210).
 
-## Getting Started
+---
 
-1. **Clone the Repository:**
+## 🚀 Live Demo
 
-   ```bash
-   git clone https://github.com/rahul4019/airbnb-clone.git
+🌐 [View StayInn Online](https://your-deployment-url.com)
 
-   ```
+---
 
-2. **Install dependencies:**
+## ✨ Features
 
-   Navigate to client directory and install frontend dependencies using yarn
+- 🌏 **Location-based Listings:** Find unique stays across all Indian states and major cities
+- 📸 **Location-specific Images:** Each place features beautiful, relevant Unsplash images
+- 🔒 **Authentication:** Register, login, Google OAuth, JWT-based sessions
+- 🏢 **Admin Panel:** Role-based access, blue-themed dashboard
+- 🖼️ **Image Upload:** Cloudinary integration for fast, reliable image hosting
+- 👤 **Modern Profile:** Editable user profiles with Unsplash avatars
+- 🎨 **Futuristic UI:** Blue gradients, glassmorphism, smooth animations, and responsive design
+- 📱 **Mobile Friendly:** Fully responsive for all devices
 
-   ```
-   yarn install
-   ```
+---
 
-   Similary navigate to api folder and install backend dependencies
+## 🖼️ Screenshots
 
-   ```
-   yarn install
-   ```
+### Home Page
+![StayInn Home Screenshot](./screenshot-home.png)
 
-3. **ENV variables:**
+### Admin Dashboard
+<!-- Add your admin screenshot here if you want -->
 
-   - create .env file in the client folder and add these variables
+---
 
-     #### VITE_BASE_URL= http://localhost:4000
+## 🛠️ Tech Stack
 
-     #### VITE_GOOGLE_CLIENT_ID= your google client id
+- **Frontend:** React, Vite, TailwindCSS, Radix UI, Lucide Icons
+- **Backend:** Node.js, Express, MongoDB (Mongoose), JWT, Cloudinary
+- **Auth:** Google OAuth, JWT
+- **Deployment:** Railway (or Vercel/Render/Heroku)
+- **Other:** Unsplash for images, modern blue branding
 
-   - create .env file in the api folder and add these variables
+---
 
-     #### PORT= 4000
+## 🚦 Quick Start
 
-     #### DB_URL= your db url
+### 1. Clone the Repo
 
-     #### JWT_SECRET= your secret (string)
+```bash
+git clone https://github.com/chirag-tech210/stayinn.git
+cd stayinn
+```
 
-     #### JWT_EXPIRY= 20d
+### 2. Install Dependencies
 
-     #### COOKIE_TIME= 7
+```bash
+npm run install-all
+```
 
-     #### SESSION_SECRET= your secret session (string)
+### 3. Set Up Environment Variables
 
-     #### CLOUDINARY_NAME= your secret session
+Create `.env` files in `/api` and `/client` as described in [DEPLOYMENT.md](./DEPLOYMENT.md).
 
-     #### CLOUDINARY_API_KEY= your cloudinary key
+### 4. Run Locally
 
-     #### CLOUDINARY_API_SECRET= your cloudinary api secret
+```bash
+npm run dev
+```
+- Frontend: [http://localhost:5173](http://localhost:5173)
+- Backend/API: [http://localhost:4000/api](http://localhost:4000/api)
 
-     #### CLIENT_URL= http://localhost:5173
+---
 
-4. **Run project:**
-   - Open terminal, navigate to client directory and run below command to start frontend
-   ```
-       yarn run dev
-   ```
-   - Open another terminal, navigate to api directory and run this command to start backend server
-   ```
-       yarn start
-   ```
+## 🚀 Deployment
 
-## Features
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for full instructions (Railway, Render, Heroku).
 
-- **User Authentication:** Users can sign up, log in, and log out securely. Passwords are hashed for security.
-- **Google Login:** Users can sign up and log in using their gmail.
+---
 
-  ![Airbnb Logo](client/public/assets/auth.png)
+## 🙋 FAQ
 
-- **Search Listings:** Users can search for accommodations.
+- **How do I add new places?**  
+  Register/login, go to your account, and use the "Add new place" button.
 
-  ![Airbnb Logo](client/public/assets/search.png)
+- **How do I become admin?**  
+  Set your user's `role` to `admin` in the database.
 
-- **View Listings:** Users can view detailed information about each accommodation, including photos, descriptions, amenities.
+- **How do I change the branding?**  
+  Edit the logo, colors, and text in `/client/src/components/ui/Header.jsx` and `/client/index.html`.
 
-  ![Airbnb Logo](client/public/assets/view.png)
+---
 
-- **Make Bookings:** Authenticated users can book accommodations for specific dates.
+## 👨‍💻 Author
 
-  ![Airbnb Logo](client/public/assets/book.png)
+- **Chirag Yadav**  
+  [GitHub](https://github.com/chirag-tech210) | [LinkedIn](https://www.linkedin.com/in/chirag-yadav/)
 
-- **Manage Listings:** Hosts can create, edit, and delete their listings.
+---
 
-  ![Airbnb Logo](client/public/assets/manage.png)
+## 📸 How to Add Screenshots
 
-- **Responsive Design:** The application is designed to be responsive and work seamlessly across different devices.
+1. Open your StayInn home page in your browser
+2. Take a screenshot (e.g., `screenshot-home.png`)
+3. Save it in the root of your repo
+4. (Optional) Add more screenshots (e.g., `screenshot-admin.png`)
 
-  ![Airbnb Logo](client/public/assets/hero.png)
+---
 
-## Technologies Used
+## ⭐️ Show Your Support
 
-- **MongoDB:** NoSQL database for storing user data, listings.
-- **Express.js:** Web application framework for building the backend server.
-- **React.js:** JavaScript library for building the user interface.
-- **Node.js:** JavaScript runtime environment for executing server-side code.
-- **Tailwind CSS:** A utility-first CSS framework
-- **Shadcn:** UI library for styling based on Tailwind CSS
-- **JWT:** JSON Web Tokens for secure user authentication.
-- **Cloudinary:** Cloud-based image management for storing and serving images.
-- **Google Cloud:** For gmail based authentication
+If you like this project, please ⭐️ the repo and share it!
+
+---
+
+> **StayInn** – The future of Indian travel, built with ❤️ by Chirag Yadav
