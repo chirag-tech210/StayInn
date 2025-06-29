@@ -37,7 +37,7 @@ Add these in Railway dashboard → Variables tab:
 - [ ] `GOOGLE_CLIENT_SECRET` - Your Google OAuth client secret
 
 #### App Configuration
-- [ ] `FRONTEND_URL` - Your Railway app URL (e.g., `https://stayinn-production.railway.app`)
+- [ ] `FRONTEND_URL` - Your Railway app URL (e.g., `https://stayinn.railway.app`)
 - [ ] `NODE_ENV` - Set to `production`
 - [ ] `PORT` - Railway will set this automatically
 
