@@ -1,6 +1,6 @@
 # 🏨 StayInn
 
-![StayInn Home Screenshot](./screenshot-home.png)
+![StayInn Home Screenshot](./screenshots/homepage.png)
 
 > **StayInn** is a modern, full-stack travel accommodation platform for India, inspired by Airbnb, built with a futuristic blue theme and crafted by [Chirag Yadav](https://github.com/chirag-tech210).
 
@@ -27,11 +27,44 @@
 
 ## 🖼️ Screenshots
 
-### Home Page
-![StayInn Home Screenshot](./screenshot-home.png)
+### 🏠 Homepage - Hero Section
+![StayInn Homepage Hero](./screenshots/homepage-hero.png)
+*Futuristic hero section with sliding background images, animated elements, and gradient text*
 
-### Admin Dashboard
-<!-- Add your admin screenshot here if you want -->
+### 🏠 Homepage - Features Section
+![StayInn Features](./screenshots/homepage-features.png)
+*Why Choose StayInn section with animated feature cards*
+
+### 🏠 Homepage - Explore Section
+![StayInn Explore](./screenshots/homepage-explore.png)
+*Explore amazing places section with place cards*
+
+### 🔐 Authentication Pages
+![StayInn Login](./screenshots/login-page.png)
+*Modern login page with blue gradient theme*
+
+![StayInn Register](./screenshots/register-page.png)
+*User registration page with form validation*
+
+### 🏢 Admin Dashboard
+![StayInn Admin Dashboard](./screenshots/admin-dashboard.png)
+*Role-based admin panel with blue theme and user management*
+
+### 📍 Places Listing
+![StayInn Places](./screenshots/places-page.png)
+*Browse all available places with search and filtering*
+
+### 🏡 Individual Place Page
+![StayInn Place Detail](./screenshots/place-detail.png)
+*Detailed view of a specific place with booking widget*
+
+### 👤 User Profile
+![StayInn Profile](./screenshots/user-profile.png)
+*User profile page with editable information and booking history*
+
+### 📱 Mobile Responsive
+![StayInn Mobile](./screenshots/mobile-view.png)
+*Fully responsive design that works perfectly on all devices*
 
 ---
 
@@ -102,10 +135,41 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for full instructions (Railway, Render, Her
 
 ## 📸 How to Add Screenshots
 
-1. Open your StayInn home page in your browser
-2. Take a screenshot (e.g., `screenshot-home.png`)
-3. Save it in the root of your repo
-4. (Optional) Add more screenshots (e.g., `screenshot-admin.png`)
+1. **Create a screenshots folder:**
+   ```bash
+   mkdir screenshots
+   ```
+
+2. **Take screenshots of your app:**
+   - Homepage (hero section)
+   - Homepage (features section)
+   - Homepage (explore section)
+   - Login page
+   - Register page
+   - Admin dashboard
+   - Places listing page
+   - Individual place page
+   - User profile page
+   - Mobile view
+
+3. **Save screenshots with descriptive names:**
+   - `homepage-hero.png`
+   - `homepage-features.png`
+   - `homepage-explore.png`
+   - `login-page.png`
+   - `register-page.png`
+   - `admin-dashboard.png`
+   - `places-page.png`
+   - `place-detail.png`
+   - `user-profile.png`
+   - `mobile-view.png`
+
+4. **Add them to your repository:**
+   ```bash
+   git add screenshots/
+   git commit -m "Add app screenshots"
+   git push
+   ```
 
 ---
 
