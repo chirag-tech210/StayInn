@@ -13,6 +13,7 @@ import BookingsPage from './pages/BookingsPage';
 import PlacesFormPage from './pages/PlacesFormPage';
 import PlacePage from './pages/PlacePage';
 import SingleBookedPlace from './pages/SingleBookedPlace';
+import AdminDashboard from './pages/AdminDashboard';
 import axiosInstance from './utils/axios';
 import { UserProvider } from './providers/UserProvider';
 import { PlaceProvider } from './providers/PlaceProvider';
@@ -47,6 +48,7 @@ function App() {
                 path="/account/bookings/:id"
                 element={<SingleBookedPlace />}
               />
+              <Route path="/admin" element={<AdminDashboard />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>

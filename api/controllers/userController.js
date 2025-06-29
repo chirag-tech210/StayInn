@@ -2,6 +2,8 @@ const User = require('../models/User');
 const cookieToken = require('../utils/cookieToken');
 const bcrypt = require('bcryptjs')
 const cloudinary = require('cloudinary').v2;
+const fs = require('fs');
+const { Image } = require('../models/Image');
 
 
 // Register/SignUp user
@@ -114,19 +116,34 @@ exports.googleLogin = async (req, res) => {
 
 // Upload picture
 exports.uploadPicture = async (req, res) => {
-  const { path } = req.file
   try {
-    let result = await cloudinary.uploader.upload(path, {
-      folder: 'Airbnb/Users',
-    });
-    res.status(200).json(result.secure_url)
+    const { path, originalname, mimetype } = req.file;
+    
+    // Read file buffer
+    const fileBuffer = fs.readFileSync(path);
+    
+    // Upload to database
+    const imageData = await Image.uploadImage(
+      fileBuffer,
+      originalname,
+      mimetype,
+      { source: 'profile', userId: req.user.id }
+    );
+
+    // Create serving URL
+    const imageUrl = `${process.env.API_URL || 'http://localhost:8000'}/api/images/${imageData._id}`;
+    
+    // Clean up temporary file
+    fs.unlinkSync(path);
+    
+    res.status(200).json(imageUrl);
   } catch (error) {
+    console.log('Image upload error:', error);
     res.status(500).json({
-      error,
-      message: 'Internal server error',
+      message: 'Image upload failed. Please try again later.',
     });
   }
-}
+};
 
 // update user
 exports.updateUserDetails = async (req, res) => {

@@ -1,14 +1,18 @@
 {
-  "name": "airbnb-api",
+  "name": "stayinn-api",
   "version": "1.0.0",
-  "description": "API for airbnb clone app",
+  "description": "API for StayInn clone app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "add-default-avatar": "node scripts/addDefaultAvatar.js",
+    "seed-places": "node scripts/seedPlaces.js",
+    "update-avatars": "node scripts/updateAvatars.js"
   },
   "keywords": [
     "api",
-    "backend"
+    "backend",
+    "stayinn"
   ],
   "author": "rahul4019",
   "license": "ISC",
@@ -24,6 +28,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
     "multer": "^1.4.5-lts.1",
-    "multer-storage-cloudinary": "^4.0.0"
+    "multer-storage-cloudinary": "^4.0.0",
+    "node-fetch": "^3.3.2"
   }
 }

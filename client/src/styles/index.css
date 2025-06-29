@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 0 0% 9%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96.1%;
@@ -22,15 +22,15 @@
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 217 91% 60%;
+    --input: 217 91% 60%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
   }
@@ -52,7 +52,7 @@ input[type='email'],
 input[type='number'],
 input[type='tel'],
 textarea {
-  @apply my-2 w-full rounded-[10px] border py-2 px-3;
+  @apply my-2 w-full rounded-[10px] border border-blue-200 py-2 px-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-colors;
 }
 
 textarea {
@@ -64,11 +64,11 @@ button {
 }
 
 button.primary {
-  @apply w-full rounded-[10px] bg-primary p-2 text-white;
+  @apply w-full rounded-[10px] bg-blue-600 p-2 text-white hover:bg-blue-700 transition-colors;
 }
 
 button.social {
-  @apply w-full rounded-[10px] border-[1px] border-black bg-white p-2 font-semibold text-black hover:bg-gray-50;
+  @apply w-full rounded-[10px] border-[1px] border-blue-300 bg-white p-2 font-semibold text-blue-600 hover:bg-blue-50 transition-colors;
 }
 
 .card {

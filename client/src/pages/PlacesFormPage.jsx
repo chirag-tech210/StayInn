@@ -229,7 +229,7 @@ const PlacesFormPage = () => {
             />
           </div>
         </div>
-        <button className="mx-auto my-4 flex rounded-full bg-primary py-3 px-20 text-xl font-semibold text-white">
+        <button className="mx-auto my-4 flex rounded-full bg-blue-600 hover:bg-blue-700 py-3 px-20 text-xl font-semibold text-white transition-colors">
           Save
         </button>
       </form>

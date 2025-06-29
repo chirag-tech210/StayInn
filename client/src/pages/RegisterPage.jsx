@@ -96,8 +96,8 @@ const RegisterPage = () => {
         </div>
 
         <div className="py-2 text-center text-gray-500">
-          Already a member?
-          <Link className="text-black underline" to={'/login'}>
+          Already a member?{' '}
+          <Link className="text-blue-600 underline hover:text-blue-700" to={'/login'}>
             Login
           </Link>
         </div>

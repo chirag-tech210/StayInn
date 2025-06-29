@@ -90,7 +90,7 @@ const LoginPage = () => {
 
         <div className="py-2 text-center text-gray-500">
           Don't have an account yet?{' '}
-          <Link className="text-black underline" to={'/register'}>
+          <Link className="text-blue-600 underline hover:text-blue-700" to={'/register'}>
             Register now
           </Link>
         </div>

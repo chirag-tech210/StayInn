@@ -1,13 +1,19 @@
 const mongoose = require('mongoose');
 
+let dbConnection = null;
+
 const connectWithDB = () => {
   mongoose.set('strictQuery', false);
-  mongoose
+  return mongoose
     .connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(console.log(`DB connected successfully`))
+    .then((connection) => {
+      dbConnection = connection;
+      console.log(`DB connected successfully`);
+      return connection;
+    })
     .catch((err) => {
       console.log(`DB connection failed`);
       console.log(err);
@@ -15,4 +21,8 @@ const connectWithDB = () => {
     });
 };
 
-module.exports = connectWithDB;
+const getConnection = () => {
+  return dbConnection;
+};
+
+module.exports = { connectWithDB, getConnection };
