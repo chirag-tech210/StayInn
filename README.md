@@ -1,6 +1,6 @@
 # 🏨 StayInn
 
-(./screenshots/homepage-hero.png)
+![stayinn screenshot](./screenshots/homepage-hero.png)
 
 > **StayInn** is a modern, full-stack travel accommodation platform for India, inspired by Airbnb, built with a futuristic blue theme and crafted by [Chirag Yadav](https://github.com/chirag-tech210).
 
